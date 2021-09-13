@@ -28,7 +28,7 @@ namespace cAlgo
 
         public override void Calculate(int index)
         {
-            if (_stockBars == null || _stockBars.Length == 0) return;
+            if (_stockBars == null || _stockBars.Length == 0 || _stockBars.Any(bars => bars == null)) return;
 
             var advancingStocks = 0;
             var decliningStocks = 0;
